@@ -26,11 +26,11 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: NPM Install
-      run: cd src && npm install
-        
-    - name: Run Build
-      run: cd src && npm run build
+    - name: NPM Install & Build
+      run: |
+          cd src
+          npm install
+          npm run build
 
     - uses: r0zar/sam-deploy-action@v1.0
       env:
