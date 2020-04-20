@@ -35,4 +35,4 @@ jobs:
     - name: Deploy
       uses: tkt-actions/aws-sam-cli@v1
       with:
-        cmd: sam build && sam local invoke
+        cmd: sam local invoke
