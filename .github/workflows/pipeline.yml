@@ -25,6 +25,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+
+    - name: Change Directory
+      run: cd src
+
+    - name: NPM Install
+      run: npm install
         
     - name: Run Build
-      run: cd hello-world && npm run build
+      run: npm run build
